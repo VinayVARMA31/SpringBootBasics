@@ -6,9 +6,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class Dev {
 
-    @Autowired
+  //If autowiring done here field injection
+  // @Autowired
     Laptop l;
 
+
+    //constructor injection
+    // public Dev(Laptop l){
+    //   this.l=l;
+    // }
+      //setter injection
+
+      @Autowired
+      public void setLaptop(Laptop l){
+        this.l=l;
+      }
+    
   public void build(){
     l.compile();
     System.out.println("Working om the project!");
