@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class Dev {
 
   //If autowiring done here field injection
-  // @Autowired
-    Laptop l;
+   @Autowired
+   private  Computer comp;
 
 
     //constructor injection
@@ -17,13 +17,13 @@ public class Dev {
     // }
       //setter injection
 
-      @Autowired
-      public void setLaptop(Laptop l){
-        this.l=l;
-      }
+      // @Autowired
+      // public void setLaptop(Computer comp){
+      //   this.comp=comp;
+      // }
     
   public void build(){
-    l.compile();
+    comp.compile();
     System.out.println("Working om the project!");
   }
 }
